@@ -132,3 +132,5 @@ dmypy.json
 
 scripts/images/tcav/activations
 scripts/images/tcav/cavs
+
+catboost_info/

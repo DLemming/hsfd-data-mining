@@ -1,0 +1,19 @@
+[project]
+name = "xai-survey"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "anchor-exp>=0.0.2.0",
+    "bitarray>=3.4.2",
+    "catboost==0.26",
+    "deap>=1.4.3",
+    "ipykernel>=6.16.2",
+    "pandas>=1.1.5",
+    "scikit-learn>=1.0.2",
+    "skope-rules>=1.0.1",
+    "tqdm>=4.67.1",
+    "ucimlrepo>=0.0.7",
+    "xgboost<1.3",
+]

@@ -1,6 +1,16 @@
-from lore.lorem import LOREM
-from lore.datamanager import *
-from lore.util import record2str, mixed_distance_idx, neuclidean, multilabel2str, nmeandev
+import sys
+sys.path.append("/home/david/dev/code/LORE_ext/src")
+from lore_explainer.lorem import LOREM
+from lore_explainer.datamanager import (
+    prepare_dataset,
+
+)
+from lore_explainer.util import (
+    record2str,
+    neuclidean,
+    multilabel2str,
+    nmeandev
+)
 from scipy.spatial.distance import jaccard
 import pickle
 import pandas as pd
@@ -16,10 +26,10 @@ def main():
     dataset = 'adult'
     model = 'catboost'
     types = 'rndgen'
-    title = "../../../../tabular/datasets/test_set_" + dataset + "_strat.p"
+    title = "../../datasets/test_set_" + dataset + "_strat.p"
     test = open(title, "rb")
     test_set = pickle.load(test)
-    pickle_in = open("../../../../tabular/results/trained_" + model + "_" + dataset + ".p", "rb")
+    pickle_in = open("../../results/trained_" + model + "_" + dataset + ".p", "rb")
     bb = pickle.load(pickle_in)
 
 
@@ -58,4 +68,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
